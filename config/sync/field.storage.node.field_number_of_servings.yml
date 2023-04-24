@@ -1,0 +1,22 @@
+uuid: 30e90f00-5985-4fec-83f9-bf1fe528b38f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: '-4BR54E0zf3ql3z8EYjE6mJ-i8xKmSNQxdDhEpxincM'
+id: node.field_number_of_servings
+field_name: field_number_of_servings
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

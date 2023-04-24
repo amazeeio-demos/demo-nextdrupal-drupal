@@ -23,7 +23,11 @@
         "drupal/core-composer-scaffold": "9.5.3",
         "drupal/core-project-message": "9.5.3",
         "drupal/core-recommended": "9.5.3",
+        "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/jsonapi_resources": "^1.0@beta",
+        "drupal/jsonapi_views": "^1.1",
         "drupal/lagoon_logs": "2.1.1",
+        "drupal/next": "^1.6",
         "drush/drush": "11.3.2",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
     },
@@ -73,7 +77,7 @@
 	            "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
         	},
  	       "drupal/decoupled_router": {
-        	    "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
+        	    "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2023-03-22/decouple_router-3111456-resolve-language-issue-63--get-translation.patch"
         	}
     	}
     }
