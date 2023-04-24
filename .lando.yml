@@ -1,0 +1,6 @@
+name: demo-nextdrupal-drupal
+recipe: lagoon
+config:
+  flavor: drupal
+  build:
+    - composer install

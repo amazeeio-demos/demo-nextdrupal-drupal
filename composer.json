@@ -1,0 +1,80 @@
+{
+    "name": "lagoon-examples/demo-nextdrupal-drupal",
+    "description": "Project template for Drupal 9 projects with MariaDB, hosted on Lagoon",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "The Lagoon Authors",
+            "homepage": "https://github.com/uselagoon",
+            "email": "uselagoon@amazee.io"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "amazeeio/drupal_integrations": "0.3.7",
+        "composer/installers": "2.2.0",
+        "cweagans/composer-patches": "1.7.2",
+        "drupal/core-composer-scaffold": "9.5.3",
+        "drupal/core-project-message": "9.5.3",
+        "drupal/core-recommended": "9.5.3",
+        "drupal/lagoon_logs": "2.1.1",
+        "drush/drush": "11.3.2",
+        "zaporylie/composer-drupal-optimizations": "1.2.0"
+    },
+    "require-dev": {
+        "drupal/core-dev-pinned": "9.5.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config":{
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-scaffold": {
+            "allowed-packages": [
+                "amazeeio/drupal_integrations"
+            ],
+            "file-mapping": {
+                "[web-root]/sites/default/all.settings.php": "assets/all.settings.php"
+            },
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+	"patches": {
+        	"drupal/subrequests": {
+	            "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
+        	},
+ 	       "drupal/decoupled_router": {
+        	    "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
+        	}
+    	}
+    }
+}
