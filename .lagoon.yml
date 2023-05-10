@@ -36,7 +36,10 @@ tasks:
 
 environments:
   main:
-    # routes:
+    routes:
+      - "drupal.demo.composetheweb.com":
+        tls-acme: true
+        insecure: Redirect
     cronjobs:
       - name: drush cron
         schedule: "*/15 * * * *"
