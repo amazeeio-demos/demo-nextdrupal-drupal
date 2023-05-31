@@ -70,4 +70,5 @@ module:
 theme:
   claro: 0
   umami: 0
+  olivero: 0
 profile: demo_umami
