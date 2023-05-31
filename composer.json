@@ -28,6 +28,7 @@
         "drupal/jsonapi_views": "^1.1",
         "drupal/lagoon_logs": "2.1.1",
         "drupal/next": "^1.6",
+        "drupal/pdf_serialization": "^2.1",
         "drush/drush": "11.3.2",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
     },
