@@ -256,7 +256,7 @@ display:
         type: normal
         title: Recipes
         description: ''
-        weight: 30
+        weight: -48
         expanded: false
         menu_name: main
         parent: ''
