@@ -5,15 +5,19 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_cooking_time
+    - field.storage.node.field_difficulty
     - field.storage.node.field_ingredients
     - field.storage.node.field_number_of_servings
     - field.storage.node.field_preparation_time
     - field.storage.node.field_recipe_category
+    - field.storage.node.field_recipe_instruction
+    - field.storage.node.field_summary
     - field.storage.node.field_tags
     - node.type.article
     - node.type.recipe
   module:
     - node
+    - options
     - pdf_serialization
     - rest
     - serialization
@@ -138,6 +142,68 @@ display:
           settings:
             link: false
           group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_difficulty:
+          id: field_difficulty
+          table: node__field_difficulty
+          field: field_difficulty
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Difficulty
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -339,6 +405,68 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_summary:
+          id: field_summary
+          table: node__field_summary
+          field: field_summary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Summary
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_ingredients:
           id: field_ingredients
           table: node__field_ingredients
@@ -400,6 +528,68 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: ul
+          separator: ', '
+          field_api_classes: false
+        field_recipe_instruction:
+          id: field_recipe_instruction
+          table: node__field_recipe_instruction
+          field: field_recipe_instruction
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Recipe instruction'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
           separator: ', '
           field_api_classes: false
         body:
@@ -806,10 +996,13 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_cooking_time'
+        - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_ingredients'
         - 'config:field.storage.node.field_number_of_servings'
         - 'config:field.storage.node.field_preparation_time'
         - 'config:field.storage.node.field_recipe_category'
+        - 'config:field.storage.node.field_recipe_instruction'
+        - 'config:field.storage.node.field_summary'
         - 'config:field.storage.node.field_tags'
   data_export_1:
     id: data_export_1
@@ -887,10 +1080,13 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_cooking_time'
+        - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_ingredients'
         - 'config:field.storage.node.field_number_of_servings'
         - 'config:field.storage.node.field_preparation_time'
         - 'config:field.storage.node.field_recipe_category'
+        - 'config:field.storage.node.field_recipe_instruction'
+        - 'config:field.storage.node.field_summary'
         - 'config:field.storage.node.field_tags'
   page_1:
     id: page_1
@@ -922,8 +1118,11 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_cooking_time'
+        - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_ingredients'
         - 'config:field.storage.node.field_number_of_servings'
         - 'config:field.storage.node.field_preparation_time'
         - 'config:field.storage.node.field_recipe_category'
+        - 'config:field.storage.node.field_recipe_instruction'
+        - 'config:field.storage.node.field_summary'
         - 'config:field.storage.node.field_tags'
