@@ -2,7 +2,7 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 8f221329-a6bf-41a6-a4ec-56da87b4c013
-name: 'Drush Site-Install'
+name: 'amazee.io Headless Umami Demo'
 mail: admin@example.com
 slogan: ''
 page:
