@@ -65,8 +65,10 @@ services:
       << : *default-environment # loads the defined environment variables from the top
       LAGOON_LOCALDEV_URL: *default-url
     networks:
-      - amazeeio-network
-      - default
+      amazeeio-network:
+        aliases:
+          - drupal-composetheweb
+      default:
 
   php:
     build:
